@@ -1,1 +1,1 @@
-# Machine-Learning-Basic-Principles
+# Exercises and project for Basic Principles course
