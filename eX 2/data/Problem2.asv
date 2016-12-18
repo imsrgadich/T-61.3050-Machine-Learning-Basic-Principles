@@ -1,0 +1,23 @@
+clc; clear all
+
+load training_data.txt
+
+n_data = 50;
+perm = randperm(n_data);
+training_idx = perm([1:24 27:end]);
+test_idx = perm(25:26);
+
+trainingData = training_data(training_idx);
+validationData = training_data(test_idx);
+targets = training_data(training_idx,2);
+
+%%----------Build the phi (Ø) matrix-----------%%
+
+degree = 10;   %%Change the polynomial degree as required
+power = 0:degree; %%Create a power array
+power = repmat(power,48,1); %%Repeat the power array 
+phi = repmat(trainingData',1,degree+1);
+phi = phi.^power;
+
+%% Find the weights by pseudoinverse technique
+

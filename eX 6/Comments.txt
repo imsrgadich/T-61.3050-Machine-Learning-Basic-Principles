@@ -1,0 +1,8 @@
+The amount of variance explanined by first two components is 99.8108%
+
+Replicate 1, 3 iterations, total sum of distances = 981.562.
+Best total sum of distances = 981.562
+Replicate 1, 3 iterations, total sum of distances = 981.562.
+Best total sum of distances = 981.562
+Replicate 1, 8 iterations, total sum of distances = 918.643.
+Best total sum of distances = 918.643

@@ -1,0 +1,5 @@
+Load into Matlab
+a=load('auto-mpg.csv');
+names=importdata('auto-mpg-names.txt')
+
+Note that missing values were replaced by -999.0, do not include those in any plots

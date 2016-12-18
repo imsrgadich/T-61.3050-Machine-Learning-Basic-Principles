@@ -1,0 +1,29 @@
+degree 3  0.0097877 0.019854
+degree 5  0.0081133 0.00040449
+degree 7  0.0079924 0.0082016
+degree 10 0.006864  0.0087925
+degree 12 0.0073228 0.00017299
+
+
+degree 14 0.006868
+degree 30 0.009187
+degree 45 0.018037
+degree 60 3.3586
+degree 70 8.2114
+
+
+clc;clear all
+
+load algae.txt
+numPositive = sum( algae(:,:)==1 );
+numNegative = length(algae) - numPositive;
+
+x=[0:0.01:1];
+priorDistribution = betapdf(x,2,10);
+postDistribution = betapdf(x,46,240);
+
+ci = paramci(postDistribution);
+figure;hold on
+plot(x,priorDistribution,'r')
+plot(x,postDistribution,'b')
+hold off
